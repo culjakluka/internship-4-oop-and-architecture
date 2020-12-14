@@ -29,14 +29,17 @@ namespace OOP_and_architecture.Presentation
                             case 1:
                                 heroName = Input("Unesite ime vaseg warriora: ");
                                 var heroWarrior = new Warrior(heroName);
+                                StartBattle(heroWarrior, monsterCollection);
                                 break;
                             case 2:
                                 heroName = Input("Unesite ime vaseg magea: ");
                                 var heroMage = new Mage(heroName);
+                                StartBattle(heroWarrior, monsterCollection);
                                 break;
                             case 3:
                                 heroName = Input("Unesite ime vaseg rangera: ");
                                 var hero = new Ranger(heroName);
+                                StartBattle(heroWarrior, monsterCollection);
                                 break;
                             default:
                                 break;
@@ -139,6 +142,10 @@ namespace OOP_and_architecture.Presentation
                 default:
                     break;
             }
+        }
+        static void StartBattle(Hero heroWarrior, Dictionary<int,Monster> monsterCollection) 
+        { 
+            
         }
     }
 }

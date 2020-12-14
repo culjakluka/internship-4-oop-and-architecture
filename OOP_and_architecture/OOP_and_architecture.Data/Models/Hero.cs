@@ -26,7 +26,7 @@ namespace OOP_and_architecture.Data
         }
         public void HalfHeal() 
         {
-            Health += 0.5 * MaxHealth;
+            Health = MaxHealth;
             var xpLoss = (Experience % 100) / 2;
             Experience -= xpLoss;
             Console.WriteLine($"{Name} healed at an expense of {xpLoss} experience!");

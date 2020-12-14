@@ -9,6 +9,7 @@ namespace OOP_and_architecture.Data
         public Warrior(string name) : base(name)
         {
             Health = 150;
+            MaxHealth = Health;
             Damage = 50;
         }
         public void RageAttack(Monster attackedMonster) 
