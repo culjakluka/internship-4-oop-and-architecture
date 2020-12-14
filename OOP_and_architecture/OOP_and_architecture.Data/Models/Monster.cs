@@ -8,6 +8,12 @@ namespace OOP_and_architecture.Data
     {
         public double Health { get; set; }
         public double Damage { get; set; }
+        protected string Name;
+        public virtual void BasicAttack(Hero attackedHero)
+        {
+            attackedHero.Health -= Damage;
+            Console.WriteLine($"");
+        }
         public override string ToString()
         {
             return $"Health - {Health} Damage - {Damage}";
