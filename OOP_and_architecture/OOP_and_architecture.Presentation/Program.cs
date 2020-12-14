@@ -51,9 +51,15 @@ namespace OOP_and_architecture.Presentation
         {
             Console.WriteLine(message);
             var userInput = "";
+            var passedOnce = false;
             do
             {
-
+                if (passedOnce) 
+                {
+                    Console.WriteLine("Ne mozete unijeti prazno polje.");
+                }
+                passedOnce = true;
+                Console.ReadLine();
             } while (!string.IsNullOrWhiteSpace(userInput));
             return userInput;
         }
@@ -107,10 +113,10 @@ namespace OOP_and_architecture.Presentation
             var randomNumber = new Random();
             for (int i = 0; i < 10; i++)
             {
-                GenerateMonster(monsterCollection, randomNumber.Next(), ref index);
+                GenerateAMonster(monsterCollection, randomNumber.Next(), ref index);
             }
         }
-        static void GenerateMonster(Dictionary<int, Monster> monsterCollection, int whichMonster, ref int index)
+        static void GenerateAMonster(Dictionary<int, Monster> monsterCollection, int whichMonster, ref int index)
         {  
             var monster = new Monster();
             switch (whichMonster)

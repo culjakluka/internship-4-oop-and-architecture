@@ -13,8 +13,12 @@ namespace OOP_and_architecture.Data
         public string Name { get; set; }
         public int Experience { get; set; }
         public int Level { get; set; }
-        public int Health { get; set; }
-        public int Damage { get; set; }
+        public double Health { get; set; }
+        public double Damage { get; set; }
+        public void BasicAttack(Monster attackedMonster)
+        {
+            attackedMonster.Health -= Damage;
+        }
 
         public void ExperienceGain(int gain) 
         {
